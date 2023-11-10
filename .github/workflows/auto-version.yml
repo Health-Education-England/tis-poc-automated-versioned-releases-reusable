@@ -20,6 +20,7 @@ jobs:
       - name: Checkout version config
         uses: actions/checkout@v4.1.1
         with:
+          clean: false
           repository: Health-Education-England/.github
           sparse-checkout: |
             .github/workflows/auto-version-config/.versionrc
