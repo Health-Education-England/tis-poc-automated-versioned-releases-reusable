@@ -19,8 +19,9 @@ jobs:
 
       - name: Get version config
         run: |
-          curl https://github.com/Health-Education-England/tis-poc-automated-versioned-releases-reusable/blob/main/.github/workflows/auto-version-config/.versionrc > .versionrc
-          curl https://github.com/Health-Education-England/tis-poc-automated-versioned-releases-reusable/blob/main/.github/workflows/auto-version-config/terraform-version-updater.js > terraform-version-updater.js
+          config_path=https://github.com/Health-Education-England/tis-poc-automated-versioned-releases-reusable/blob/main/.github/workflows/auto-version-config
+          curl $config_path/.versionrc > .versionrc
+          curl $config_path/terraform-version-updater.js > terraform-version-updater.js
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
