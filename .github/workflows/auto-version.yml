@@ -19,7 +19,7 @@ jobs:
 
       - name: Get version config
         run: |
-          config_path=https://github.com/Health-Education-England/tis-poc-automated-versioned-releases-reusable/blob/main/.github/workflows/auto-version-config
+          config_path=https://raw.githubusercontent.com/health-education-england/tis-poc-automated-versioned-releases-reusable/main/.github/workflows/auto-version-config
           curl $config_path/.versionrc > .versionrc
           curl $config_path/terraform-version-updater.js > terraform-version-updater.js
 
