@@ -22,8 +22,7 @@ jobs:
         with:
           repository: Health-Education-England/.github
           filter: |
-            .github/workflows/auto-version-config/.versionrc
-            .github/workflows/auto-version-config/terraform-version-updater.js
+            .github/workflows/auto-version-config/*
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
