@@ -17,12 +17,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout version config
-        uses: actions/checkout@v4.1.1
-        with:
-          repository: Health-Education-England/.github
-          filter: |
-            .github/workflows/auto-version-config/*
+      - name: Get version config
+        run: |
+          curl https://github.com/Health-Education-England/tis-poc-automated-versioned-releases-reusable/blob/main/.github/workflows/auto-version-config/.versionrc > .versionrc
+          curl https://github.com/Health-Education-England/tis-poc-automated-versioned-releases-reusable/blob/main/.github/workflows/auto-version-config/terraform-version-updater.js > terraform-version-updater.js
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
