@@ -22,7 +22,9 @@ jobs:
         with:
           repository: Health-Education-England/.github
           sparse-checkout: |
-            .github/workflows/auto-version-config/*
+            .github/workflows/auto-version-config/.versionrc
+            .github/workflows/auto-version-config/terraform-version-updater.js
+          sparse-checkout-cone-mode: false
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
