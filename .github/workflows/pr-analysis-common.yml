@@ -1,7 +1,7 @@
 name: PR Analysis - Common
 
 permissions:
-  pull-request: read
+  pull-requests: read
 
 on:
   workflow_call:
