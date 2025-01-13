@@ -29,10 +29,10 @@ jobs:
         run: |
           if git tag --points-at | grep -Eq 'v[0-9]{1,}.[0-9]{1,}.[0-9]{1,}'; then
             echo Version tag found on latest commit, increment not required.
-            echo "do_increment=false"
+            echo "do_increment=false" >> $GITHUB_OUTPUT
           else
             echo Version tag not found on latest commit, increment required.
-            echo "do_increment=true"
+            echo "do_increment=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Get versioning config files
